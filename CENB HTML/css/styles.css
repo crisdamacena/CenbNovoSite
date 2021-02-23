@@ -2460,18 +2460,18 @@ fieldset:disabled a.btn {
 
 .btn-primary {
   color: #fff;
-  background-color: #64a19d;
-  border-color: #64a19d;
+  background-color: #85d0f9;
+  border-color: #85d0f9;
 }
 .btn-primary:hover {
   color: #fff;
-  background-color: #548b87;
-  border-color: #4f837f;
+  background-color: #85d0f9;
+  border-color: #85d0f9;
 }
 .btn-primary:focus, .btn-primary.focus {
   color: #fff;
-  background-color: #548b87;
-  border-color: #4f837f;
+  background-color: #85d0f9;
+  border-color: #85d0f9;
   box-shadow: 0 0 0 0.2rem rgba(123, 175, 172, 0.5);
 }
 .btn-primary.disabled, .btn-primary:disabled {
@@ -10259,8 +10259,8 @@ body {
   margin-bottom: 5rem;
 }
 
-.projects-section {
-  padding: 10rem 0;
+.evento-section {
+  padding: 3rem 0;
 }
 .projects-section .featured-text {
   padding: 2rem;
