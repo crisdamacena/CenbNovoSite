@@ -1,0 +1,23 @@
+.noticia-section {
+    padding: 3rem;
+    padding-bottom: 50rem;
+}
+
+.financeiro-section {
+    padding-top: 3rem;
+    padding-bottom: 43rem;
+}
+
+.formulario-section {
+    padding: 3rem;
+    padding-bottom: 40rem;
+}
+
+.maps-section {
+    padding: 3rem;
+    padding-bottom: 40rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+}
