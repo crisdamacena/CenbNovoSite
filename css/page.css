@@ -1,3 +1,490 @@
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+
+	0. 	CSS Reset
+	1. 	Document Setup
+	2. 	Element Base
+	3. 	Helper Classes
+	4. 	Site Header
+	5. 	Menu Modal
+	6. 	Search Modal
+	7. 	Page Templates
+		a. 	Template: Cover Template
+		c. 	Template: Full Width
+	8.  Post: Archive
+	9.  Post: Single
+	10. Blocks
+	11. Entry Content
+	12. Comments
+	13. Site Pagination
+	14. Error 404
+	15. Widgets
+	16. Site Footer
+	17. Media Queries
+
+----------------------------------------------------------------------------- */
+
+/*--------------------------------------------------------------
+>>> 0 CSS Reset
+----------------------------------------------------------------
+*/
+
+html,
+body {
+	border: none;
+	margin: 0;
+	padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+address,
+big,
+cite,
+code,
+em,
+font,
+img,
+small,
+strike,
+sub,
+sup,
+li,
+ol,
+ul,
+fieldset,
+form,
+label,
+legend,
+button,
+table,
+caption,
+tr,
+th,
+td {
+	border: none;
+	font-size: inherit;
+	line-height: inherit;
+	margin: 0;
+	padding: 0;
+	text-align: inherit;
+}
+
+/*--------------------------------------------------------------
+>>> Elementos gerais
+----------------------------------------------------------------
+*/
+body {
+	box-sizing: border-box;
+	color: #000;
+    font-family: 'Open Sans', sans-serif;
+	font-size: 16px;
+	letter-spacing: -0.015em;
+	text-align: left;
+}
+h1, h2, h3, h4, h5, h6{
+    font-family: 'Hind', sans-serif;
+}
+h1{
+    font-size: 32px;
+    font-weight: 700;
+}
+h2{
+    font-size: 26px;
+    font-weight: 600;
+}
+h3{
+    font-size: 22px;
+    font-weight: 600;
+}
+h4{
+    font-size: 20px;
+    font-weight: 500;
+}
+a {
+    text-decoration: none;
+    background-color: transparent;
+}
+button {
+    display: inline-block;
+    border: none;
+    border-radius: 8px;
+    margin: 0;
+    text-decoration: none;
+    background:#057db2;
+    color: #fff;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    text-transform: uppercase;
+    cursor: pointer;
+    text-align: center;
+    font-weight: 600;
+    padding: .402777775rem .80555555rem;
+    transition: all .2s ease-in-out; 
+}
+button:hover {
+    background:#1b2d58;
+    color: #fff;
+    transform: scale(1.01);
+}
+p{
+    font-size: 1.1em;
+}
+.container{
+    width: 100%;
+    padding-right: 0.75rem;
+    padding-left: 0.75rem;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media (min-width: 576px) {
+    .container {
+      max-width: 540px;
+    }
+  }
+  @media (min-width: 768px) {
+    .container {
+      max-width: 720px;
+    }
+  }
+  @media (min-width: 992px) {
+    .container {
+      max-width: 960px;
+    }
+  }
+  @media (min-width: 1200px) {
+    .container {
+      max-width: 1140px;
+    }
+}
+/*--------------------------------------------------------------
+>>> Menu Navegação
+----------------------------------------------------------------
+*/
+/* Logo ---------------------------------- */
+.logo{
+    background: #fff;
+    width: 100px;
+    border-radius: 8px;
+    height: auto;
+
+    box-shadow: 0 5px 20px rgba(0,0,0,0.09);
+    transition: all .2s ease-in-out; 
+}
+.logo:hover{
+    transform: scale(1.01);
+}
+.logo img{
+    width: 90px;
+    justify-content: center;
+    padding-left: 3.2%;
+}
+/* Menu ---------------------------------- */
+.fixed-top {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+}
+#mainNav {
+    min-height: 3.5em;
+}
+#mainNav .navbar-brand {
+    font-weight: 700;
+   /*padding: 0.9rem 0;*/
+}
+#mainNav .navbar-nav .nav-item:hover {
+    color: #fff;
+    outline: none;
+    background-color: transparent;
+}
+#mainNav .navbar-nav .nav-item:active, #mainNav .navbar-nav .nav-item:focus {
+    outline: none;
+    background-color: transparent;
+    color: #fff;
+}
+#mainNav .nav-link {
+    color: #1b2d58;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: all .2s ease-in-out; 
+}
+#mainNav .nav-link:hover {
+    color: #057db2;
+    transform: scale(1.05);
+}
+/* Menu Toggler ---------------------------------- */
+#mainNav .navbar-toggler {
+    font-size: 100%;
+    padding: 0.75rem;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    background: #057db2;
+}
+#mainNav .navbar-toggler:focus {
+    outline: none;
+}
+.navbar .container{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar-nav{
+    align-items: center;
+    margin-left: auto !important;
+}
+.navbar-brand {
+    display: inline-block;
+    padding-top: 0.3125rem;
+    padding-bottom: 0.3125rem;
+    margin-right: 1rem;
+    font-size: 1.25rem;
+    line-height: inherit;
+    white-space: nowrap;
+}
+.navbar-brand:hover, .navbar-brand:focus {
+    text-decoration: none;
+}
+.navbar-nav {
+    display: flex;
+    flex-direction: column;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+.navbar-nav .nav-link {
+    padding-right: 0;
+    padding-left: 0;
+}
+.navbar-nav .dropdown-menu {
+    position: static;
+    float: none;
+}
+.navbar-text {
+    display: inline-block;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+.navbar-collapse {
+    flex-basis: 100%;
+    flex-grow: 1;
+    align-items: center;
+}
+.navbar-toggler {
+    padding: 0.25rem 0.75rem;
+    font-size: 1.25rem;
+    line-height: 1;
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+}
+.navbar-toggler:hover, .navbar-toggler:focus {
+    text-decoration: none;
+}
+.navbar-toggler-icon {
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    vertical-align: middle;
+    content: "";
+    background: no-repeat center center;
+    background-size: 100% 100%;
+}
+.navbar-light .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, 0.5%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+.nav{
+    align-items: center;
+}
+@media (max-width: 575.98px) {
+    .navbar-expand-lg > .container{
+
+    }
+}
+@media (min-width: 576px) {
+    .navbar-expand-lg > .container{
+
+    }
+}
+@media (max-width: 767.98px) {
+    .navbar-expand-lg > .container{
+
+    }
+}
+@media (min-width: 768px) {
+    .navbar-expand-lg > .container{
+
+    }
+}
+@media (max-width: 991.98px) {
+    .navbar-expand-lg > .container{
+        padding: 20px 15px;
+    }
+    #mainNav {
+        min-height: 3.5rem;
+        background-color: #fff;/*Background Menu*/
+    }
+    .icons{
+        padding: 2rem 1.5rem;
+        font-size: 1em;
+        color: #1b2d58;
+        transition: all .2s ease-in-out; 
+    }
+    .icons:hover{
+        color: #057db2;
+        transform: scale(1.05);
+    }
+}
+@media (min-width: 992px) {
+    .navbar-expand-lg {
+      flex-flow: row nowrap;
+      justify-content: flex-start;
+    }
+    .navbar-expand-lg .navbar-nav {
+      flex-direction: row;
+    }
+    .navbar-expand-lg .navbar-nav .dropdown-menu {
+      position: absolute;
+    }
+    .navbar-expand-lg .navbar-nav .nav-link {
+      padding-right: 0.5rem;
+      padding-left: 0.5rem;
+    }
+    .navbar-expand-lg > .container{
+      flex-wrap: nowrap;
+    }
+    .navbar-expand-lg .navbar-collapse {
+      display: flex !important;
+      flex-basis: auto;
+    }
+    .navbar-expand-lg .navbar-toggler {
+      display: none;
+    }
+    #mainNav {
+        border-bottom: none;
+        transition: background-color 0.3s ease-in-out;
+        background: #fff;/*Background Menu*/
+        box-shadow: 0 5px 20px rgba(0,0,0,0.09);
+    }
+    #mainNav .nav-link {
+        color: #1b2d58;
+        font-weight: 600;
+        text-transform: uppercase;
+        transition: all .2s ease-in-out; 
+        padding: 0.9rem;
+    }
+    #mainNav .nav-link:hover {
+        color: #057db2;
+        transform: scale(1.05);
+    }
+    .logo{
+        width: 155px;
+    }
+    .logo img{
+        width: 149px;
+    }
+    .icons{
+        padding: 2rem 1.5rem;
+        font-size: 2em;
+        color: #1b2d58;
+        transition: all .2s ease-in-out; 
+    }
+    .icons:hover{
+        color: #057db2;
+        transform: scale(1.05);
+    }
+}
+@media (max-width: 1199.98px) {
+    
+}
+@media (min-width: 1200px) {
+
+}
+/* Cabeçalho ---------------------------------- */
+.video-hero{
+    margin-top: 4em;
+}
+#headerVideo {
+    position: relative;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    height: 45%;
+    z-index: -1;
+    object-fit: cover;
+    object-position: center;
+}
+@media (max-width: 767.98px) {
+    #headerVideo {
+        position: relative;
+        right: 0;
+        bottom: 0;
+        max-width: 100%;
+        height: 20%;
+        z-index: -1;
+        object-position: center;
+    }
+}
+
+.masthead {
+    position: relative;
+    width: 100%;
+    height: auto;
+    min-height: 35rem;
+    padding: 15rem 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, #000000 100%), url("../assets/img/bg1.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+  }
+  .masthead h1 {
+    font-family: "Varela Round", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+    letter-spacing: 0.8rem;
+    background: #ffffff;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+            background-clip: text;
+  }
+  .masthead h2 {
+    max-width: 20rem;
+    font-size: 1rem;
+  }
+  @media (min-width: 768px) {
+    .masthead h1 {
+      font-size: 4rem;
+      line-height: 4rem;
+    }
+  }
+  @media (min-width: 992px) {
+    .masthead {
+      height: 50vh;
+      padding: 0;
+    }
+    .masthead h1 {
+      font-size: 6.5rem;
+      line-height: 6.5rem;
+      letter-spacing: 0.8rem;
+    }
+    .masthead h2 {
+      max-width: 30rem;
+      font-size: 1.25rem;
+    }
+  }
+
 .noticia-section {
     padding: 3rem;
     padding-bottom: 50rem;
