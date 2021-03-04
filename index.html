@@ -16,13 +16,14 @@
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="css/styles.css" rel="stylesheet" />
     <link href="css/page.css" rel="stylesheet" />
+    <link rel="stylesheet" href="node_modules/@glidejs/glide/dist/css/glide.core.min.css">
 </head>
 
 <body id="page-top">
     <!-- Navigation-->
     <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
         <div class="container">
-            <a class="navbar-brand js-scroll-trigger logo" href="index.html"><img src="assets/img/logocenb.png"></a>
+            <a class="navbar-brand js-scroll-trigger logo" href="index.html"><img src="assets/img/logo.png"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 Menu
                 <i class="fas fa-bars"></i>
@@ -30,244 +31,69 @@
             <div class="collapse navbar-collapse nav" id="navbarResponsive">
                 <ul class="navbar-nav">
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">Sobre</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#eventos">Eventos</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#noticias">Noticias</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#financeiro">Financeiro</a></li>
+                    <li class="nav-item dropdown"><a class="nav-link drop-link" href="#">Institucional  <i class="fas fa-angle-down"></i></a>
+                         <div class="dropdown-content">
+                            <a href="#">Quem Somos</a>
+                            <a href="#">Diretoria</a>
+                            <a href="#">História</a>
+                            <a href="#">Transparência</a>
+                            <a href="#">Notícias para associados</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown"><a class="nav-link drop-link" href="#">Eventos  <i class="fas fa-angle-down"></i></a>
+                        <div class="dropdown-content">
+                           <a href="#">Agendamento</a>
+                           <a href="#">Galeria</a>
+                           <a href="#">Maps</a>
+                       </div>
+                   </li>
+                   <li class="nav-item dropdown"><a class="nav-link drop-link" href="#">Financeiro  <i class="fas fa-angle-down"></i></a>
+                        <div class="dropdown-content">
+                           <a href="#">Boletos</a>
+                        </div>
+                    </li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#news">Notícias</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#">Parcerias</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#">Newsletter</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#formulario">Fale Conosco</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#signup"><button class="" type="submit">Seja sócio</button></a></li>
+                    <a href="https://www.facebook.com/cenbdf"><i class="fab fa-facebook-square icons"></i></a>
+                    <a href="https://www.instagram.com/_cenb/"><i class="fab fa-instagram icons"></i></a> 
                 </ul>
-            </div>
-            <div class="collapse navbar-collapse nav" id="navbarResponsive">
-                <a href="https://www.facebook.com/cenbdf"><i class="fab fa-facebook-square icons"></i></a>
-                <a href="https://www.instagram.com/_cenb/"><i class="fab fa-instagram icons"></i></a>
-                <a href="mailto:cenb@cenb.com.br"><i class="fas fa-envelope icons"></i></a>
             </div>
         </div>
     </nav>
-
-
-    <!-- Masthead
     <header class="masthead">
-        <div class="container d-flex h-100 align-items-center">
-            <div class="mx-auto text-center">
-                <h1 class="mx-auto my-0">CEnB</h1>
-                <h2 class="text-white-50 mx-auto mt-2 mb-5">Clube de Engenharia de Brasília</h2>
-            </div>
-        </div>
-    </header> -->
-    <!-- Carrosel de Eventos -->
-    <section class="carrosel-section text-justify" id="carrosel" style="background-color: black;">
-        <div class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="assets/img/ab1.jpg" class="imgcarrosel" alt="#eventos">
-                </div>
-                <div class="carousel-item">
-                    <img src="assets/img/bg1.jpg" class="imgcarrosel" alt="#eventos">
-                </div>
-                <div class="carousel-item">
-                    <img src="assets/img/ab1.jpg" class="imgcarrosel" alt="#eventos">
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- About -->
-    <section class="about-section text-justify" id="about">
-        <!-- <div class="video-hero">
-            <video autoplay muted loop id="headerVideo">
-                <source src="assets/video/cenb_video.mp4" type="video/mp4">
-                    Your browser does not support HTML5 video.
-            </video>
-            <div class="overlay"></div>
-        </div> -->
         <div class="container">
+            <div>
+                <h1>Clube de Engenharia de Brasília</h1>
+                <button>Button</button>
+            </div>
+        </div>
+    </header>
+    <section class="about-section text-justify" id="about">
+        <div class="container-medium">
+            <h2 class="title-section">Sobre</h2>
             <div class="row">
-                <div class="col-lg-8 mx-auto">
-                    <h2>Sobre</h2>
+                <div class="">
                     <p>O Clube de Engenharia de Brasília – CEnB foi fundado em 1957 pelos engenheiros que trabalhavam pela NOVACAP na construção de Brasília. brA primeira Assembleia Geral do Clube ocorreu em 28 de setembro. Ao todo, foram 92 profissionais
                         de engenharia, arquitetura e agronomia que se reuniram na busca da valorização e do fortalecimento da classe. Em documentos das reuniões de fundação do Clube consta que “o objetivo primordial deste Clube sempre foi o de congregar
                         todos os profissionais da engenharia, arquitetura e agronomia que trabalharam na construção e consolidação da nova capital do Brasil, promovendo o desenvolvimento profissional e mantendo unida a classe em prol do bem comum e da
                         nossa sociedade”.
-                        <p>Em 1970, a Associação Profissional dos Engenheiros, Arquitetos e Agrônomos do Distrito Federal, que era reconhecida como o Sindicato da Classe, associou-se ao Clube e formou definitivamente o CEnB. O Clube passou a ter participação
-                            ativa no nascimento de várias entidades da classe, como o Conselho Regional de Engenharia, Arquitetura e Agronomia da 12ª Região, com jurisdição no Distrito Federal e Goiás; do Instituto Nacional de Orientação às Cooperativas
-                            de Habitação (Inocoop) e do Sindicato dos Engenheiros. O CEnB também marcou presença em vários órgãos públicos, contando com representantes nos Conselhos Rodoviários do DER-DF, da Terracap e da Companhia Energética de Brasília
-                            (CEB).
-                        </p>
+                    </p>
+                    <p>Em 1970, a Associação Profissional dos Engenheiros, Arquitetos e Agrônomos do Distrito Federal, que era reconhecida como o Sindicato da Classe, associou-se ao Clube e formou definitivamente o CEnB. O Clube passou a ter participação
+                        ativa no nascimento de várias entidades da classe, como o Conselho Regional de Engenharia, Arquitetura e Agronomia da 12ª Região, com jurisdição no Distrito Federal e Goiás; do Instituto Nacional de Orientação às Cooperativas
+                        de Habitação (Inocoop) e do Sindicato dos Engenheiros. O CEnB também marcou presença em vários órgãos públicos, contando com representantes nos Conselhos Rodoviários do DER-DF, da Terracap e da Companhia Energética de Brasília
+                        (CEB).
+                    </p>
                     </p>
                 </div>
             </div>
-            <div>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur sequi recusandae debitis officia unde quas quaerat numquam ducimus officiis adipisci ex, quam delectus illum velit doloribus dolorum? Vero, veritatis id?</p>
-            </div>
         </div>
     </section>
-    <!-- Eventos-->
-    <section class="evento-section" id="eventos">
-        <div class="container">
-            <!-- Featured Project Row-->
-
-            <div class="row align-items-center no-gutters mb-4 mb-lg-5">
-                <div class="col-xl-4 col-lg-5">
-                    <div class="featured-text">
-                        <h2>Eventos</h2>
-                        <p class="text-black-50 mb-0">Confira os proximos eventos</p>
-                    </div>
-                </div>
-                <div class="d-flex justify-content-end">
-                    <a href="agendamento.php">
-                        <button type="button" class="btn btn-primary position-relative">
-                        Agende seu Evento <span class="position-absolute top-0 start-100 translate-middle badge border border-light rounded-circle bg-danger p-2"></span>
-                      </button>
-                    </a>
-                </div>
-            </div>
-            <div id="multi-item-example" class="carousel slide carousel-multi-item" data-ride="carousel">
-
-                <!--Controls-->
-                <div class="controls-top">
-                    <a class="btn-floating" href="#multi-item-example" data-slide="prev"><i
-                        class="fas fa-chevron-left"></i></a>
-                    <a class="btn-floating" href="#multi-item-example" data-slide="next"><i
-                        class="fas fa-chevron-right"></i></a>
-                </div>
-
-
-                <!--/.Controls-->
-
-                <!--Indicators-->
-                <ol class="carousel-indicators">
-                    <li data-target="#multi-item-example" data-slide-to="0" class="active"></li>
-                    <li data-target="#multi-item-example" data-slide-to="1"></li>
-
-                </ol>
-                <!--/.Indicators-->
-
-                <!--Slides-->
-                <div class="carousel-inner" role="listbox">
-
-                    <!--First slide-->
-                    <div class="carousel-item active">
-
-                        <div class="col-md-3" style="float:left">
-                            <div class="card mb-2">
-                                <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(60).jpg" alt="Card image cap">
-                                <div class="card-body">
-                                    <h4 class="card-title">Card title</h4>
-                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                    <a class="btn btn-primary">Button</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-md-3" style="float:left">
-                            <div class="card mb-2">
-                                <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(60).jpg" alt="Card image cap">
-                                <div class="card-body">
-                                    <h4 class="card-title">Card title</h4>
-                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                    <a class="btn btn-primary">Button</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-md-3" style="float:left">
-                            <div class="card mb-2">
-                                <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(60).jpg" alt="Card image cap">
-                                <div class="card-body">
-                                    <h4 class="card-title">Card title</h4>
-                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                    <a class="btn btn-primary">Button</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-md-3" style="float:left">
-                            <div class="card mb-2">
-                                <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(60).jpg" alt="Card image cap">
-                                <div class="card-body">
-                                    <h4 class="card-title">Card title</h4>
-                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                    <a class="btn btn-primary">Button</a>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                    <!--/.First slide-->
-
-                    <!--Second slide-->
-                    <div class="carousel-item">
-
-                        <div class="col-md-3" style="float:left">
-                            <div class="card mb-2">
-                                <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(60).jpg" alt="Card image cap">
-                                <div class="card-body">
-                                    <h4 class="card-title">Card title</h4>
-                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                    <a class="btn btn-primary">Button</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-md-3" style="float:left">
-                            <div class="card mb-2">
-                                <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(47).jpg" alt="Card image cap">
-                                <div class="card-body">
-                                    <h4 class="card-title">Card title</h4>
-                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                    <a class="btn btn-primary">Button</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-md-3" style="float:left">
-                            <div class="card mb-2">
-                                <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(48).jpg" alt="Card image cap">
-                                <div class="card-body">
-                                    <h4 class="card-title">Card title</h4>
-                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                    <a class="btn btn-primary">Button</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-md-3" style="float:left">
-                            <div class="card mb-2">
-                                <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(47).jpg" alt="Card image cap">
-                                <div class="card-body">
-                                    <h4 class="card-title">Card title</h4>
-                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                    <a class="btn btn-primary">Button</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--/.Second slide-->
-
-
-
-                </div>
-                <!--/.Slides-->
-
-            </div>
-            <!--/.Carousel Wrapper-->
-
-        </div>
-    </section>
-    <!-- Noticias -->
-    <section class="noticia-section" id="noticias">
-        <div class="container">
-            <!-- Featured Project Row-->
-            <div class="row align-items-center no-gutters mb-4 mb-lg-5">
-                <div class="col-xl-8 col-lg-7"><img class="img-fluid mb-3 mb-lg-0" src="assets/img/bg-masthead.jpg" alt="" /></div>
-                <div class="col-xl-4 col-lg-5">
-                    <div class="featured-text">
-                        <h2>Noticias</h2>
-                        <p class="text-black-50 mb-0">Confira os proximos eventos</p>
-                    </div>
-                </div>
-            </div>
-            <!-- Card Noticias -->
+    <section id="news">
+        <div class="container-medium">
+            <h2 class="title-section">Últimas notícias</h2>
             <div class="card-group">
                 <div class="card">
                     <img src="assets/img/ab1.jpg" class="card-img-top" alt="...">
@@ -297,55 +123,157 @@
             </div>
         </div>
     </section>
-    <!-- Financeiro -->
-    <section class="financeiro-section" id="financeiro">
-        <div class="container">
-            <!-- Featured Project Row-->
-            <div class="row align-items-center no-gutters mb-4 mb-lg-5">
-                <div class="col-xl-4 col-lg-5">
-                    <div class="featured-text">
-                        <h2>Financeiro</h2>
-                        <p class="text-black-50 mb-0">Gere seu boleto de Anuidade</p>
-                    </div>
-                </div>
+    <section id="event">
+        <div class="before"></div>
+        <section id="textovideo">
+            <video id="videobcg" preload="auto" autoplay="true" loop="loop" muted="muted" volume="0">
+                <source src="assets/video/cenb_video.mp4" type="video/mp4">
+                    <source src="movie.webm" type="video/webm">Sorry, your browser does not support HTML5 video.</video>
+            <h2>O melhor lugar para o seu evento</h2>
+        </section>
+        <div class="after"></div>
+        <div class="event">
+            <div class="container-medium">
+                <h2 class="title-section">Próximos Eventos</h2>
+                        <div id="multi-item-example" class="carousel slide carousel-multi-item" data-ride="carousel">
+                            <ol class="carousel-indicators">
+                                <li data-target="#multi-item-example" data-slide-to="0" class="active"></li>
+                                <li data-target="#multi-item-example" data-slide-to="1"></li> 
+                            </ol>
+                            <div class="carousel-inner" role="listbox">
+                                <div class="carousel-item active">
+                                    <div class="col-md-3" style="float:left">
+                                        <div class="card">
+                                            <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(60).jpg" alt="Card image cap">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Card title</h5>
+                                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                                <button>Button</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                
+                                    <div class="col-md-3" style="float:left">
+                                        <div class="card">
+                                            <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(60).jpg" alt="Card image cap">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Card title</h5>
+                                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                                <button>Button</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3" style="float:left">
+                                        <div class="card">
+                                            <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(60).jpg" alt="Card image cap">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Card title</h5>
+                                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                                <button>Button</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3" style="float:left">
+                                        <div class="card">
+                                            <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(60).jpg" alt="Card image cap">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Card title</h5>
+                                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                                <button>Button</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--/.First slide-->
+                            
+                                <!--Second slide-->
+                                <div class="carousel-item">
+                                
+                                    <div class="col-md-3" style="float:left">
+                                        <div class="card">
+                                            <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(60).jpg" alt="Card image cap">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Card title</h5>
+                                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                                <button>Button</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                
+                                    <div class="col-md-3" style="float:left">
+                                        <div class="card">
+                                            <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(47).jpg" alt="Card image cap">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Card title</h5>
+                                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                                <button>Button</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                
+                                    <div class="col-md-3" style="float:left">
+                                        <div class="card">
+                                            <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(48).jpg" alt="Card image cap">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Card title</h5>
+                                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                                <button>Button</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                
+                                    <div class="col-md-3" style="float:left">
+                                        <div class="card">
+                                            <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/City/4-col/img%20(47).jpg" alt="Card image cap">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Card title</h5>
+                                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                                <button>Button</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--/.Slides-->
+                            <div class="controls">
+                                <a class="" href="#multi-item-example" data-slide="prev"><i class="fas fa-chevron-left"></i></a>
+                                <a class="" href="#multi-item-example" data-slide="next"><i class="fas fa-chevron-right"></i></a>
+                            </div>
+                        </div>
+                        <!--/.Carousel Wrapper-->
             </div>
-            <div class="container" id="rowpag">
-                <p>Associados já podem pagar suas anuidades, inclusive as que estiverem em atraso, para o Clube de Engenharia com cartão de débito ou crédito, podendo parcelar o valor. <br><br>É o novo sistema de pagamento online (Plataforma financeira via
-                    internet) “Plano Checkout”, da Cielo, contratada pelo Clube de Engenharia.</p>
+        </div> 
+    </section>
+    <section class="signup-section" id="signup">
+        <div class="container-medium">
+            <div class="row">
+                <h3>Agendar um evento agora <i class="far fa-paper-plane fa-2x"></i></h3>
+                <input class="form-control" id="inputEmail" type="email" placeholder="Digite seu email" />
+                <button>Enviar</button></a>
             </div>
         </div>
     </section>
-    <!-- Contact-->
-    <section class="formulario-section" id="formulario">
-        <div class="container">
-            <h2>Fale Conosco</h2>
-            <div class="card-body">
-                <div class="mb-3">
+    <section class="about-section text-justify" id="financial">
+        <div class="container-medium">
+            <h2 class="title-section">Financeiro</h2>
+            <div class="">
+                <p>ut I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. 
+                </p>
+                <p>
+                    To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?
+                </p>
+            </div>
+        </div>
+    </section>
+    <section id="contact">
+        <div class="container-medium">
+            <h2 class="title-section">Fale Conosco</h2>
+            <div class="row">
                     <label for="exampleFormControlInput1" class="form-label">Email</label>
                     <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Nome@example.com">
-                </div>
-                <div class="mb-3">
                     <label for="exampleFormControlTextarea1" class="form-label">Digite seu Texto</label>
                     <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" style="margin-top: 0px;margin-bottom: 0px;height: 142px;" placeholder="Sugestões, Elogios, Reclamações"></textarea>
-                </div>
-                <button class="btn btn-success" id="form-send">Enviar</button>
-            </div>
-
-        </div>
-    </section>
-    <!-- Signup-->
-    <section class="signup-section" id="signup">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-10 col-lg-8 mx-auto text-center">
-                    <i class="far fa-paper-plane fa-2x mb-2 text-white"></i>
-                    <h2 class="text-white mb-5">Associe-se</h2>
-                    <form class="form-inline d-flex">
-                        <input class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0" id="inputEmail" type="email" placeholder="Digite seu email" />
-                        <a href="copia do html.html"><button class="btn btn-primary mx-auto"
-                            type="submit">Enviar</button></a>
-                    </form>
-                </div>
+                    <button>Enviar</button>
             </div>
         </div>
     </section>
@@ -358,7 +286,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Third party plugin JS-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-    <!-- Core theme JS-->
+    <!--Core theme JS-->
     <script src="js/scripts.js"></script>
 </body>
 
